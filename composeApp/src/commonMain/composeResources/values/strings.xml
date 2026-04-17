@@ -1,0 +1,187 @@
+<resources>
+    <string name="cyclone">Cyclone</string>
+    <string name="open_github">Open github</string>
+    <string name="run">Run</string>
+    <string name="stop">Stop</string>
+    <string name="theme">Theme</string>
+    <!-- Common/general -->
+    <string name="unknown">Unknown</string>
+    <string name="ellipsis">...</string>
+
+    <!-- Tabs -->
+    <string name="favorites_tab_title">Favorites</string>
+    <string name="scan_tab_title">Scan</string>
+
+    <!-- Search devices -->
+    <string name="scan_for_devices_title">Scan for Devices</string>
+    <string name="refresh_scan_cd">Refresh Scan</string>
+    <string name="scanning">Scanning...</string>
+    <string name="start_scan">Start Scan</string>
+    <string name="searching_devices">Searching for devices...</string>
+    <string name="no_teufel_devices_found">No Teufel devices found.</string>
+    <string name="device_id_format">ID: %1$s</string>
+    <string name="rssi_dbm_format">%1$d dBm</string>
+    <string name="connected_to_format">Connected to: %1$s</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="connecting_to_format">Connecting to %1$s</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connection_failed_format">Connection Failed: %1$s</string>
+    <string name="not_connected">Not Connected</string>
+    <string name="error_format">Error: %1$s</string>
+    <string name="error_prefix">Error: </string>
+
+    <!-- Known devices -->
+    <string name="clear_all_cd">Clear all</string>
+    <string name="clear_all_devices">Clear All Devices</string>
+    <string name="connect">Connect</string>
+    <string name="known_devices_title">Known Devices</string>
+    <string name="known_devices_hint">Connect to devices through the Search Devices screen\nto add them to your known devices list</string>
+    <string name="last_connected_format">Last connected: %1$s</string>
+    <string name="remove_device_cd">Remove device</string>
+    <string name="no_known_devices">No known devices</string>
+    <string name="something_went_wrong_try_again">Something went wrong, Try Again</string>
+    <string name="loading">Loading</string>
+
+    <!-- Permissions -->
+    <string name="permissions_required_title">Permissions Required</string>
+    <string name="permissions_required_message">This app needs Location and Bluetooth permissions to find and connect to your devices.</string>
+    <string name="current_states_format">Current States:\nBluetooth Scan: %1$s\nBluetooth Connect: %1$s</string>
+    <string name="grant_permissions_button">Grant Permissions</string>
+
+    <!-- Control screen -->
+    <string name="device_control_title">Device Control</string>
+    <string name="back_cd">Back</string>
+    <string name="status_format">Status: %1$s</string>
+    <string name="device_disconnected_or_not_found">Device disconnected or not found.</string>
+
+    <!-- Battery -->
+    <string name="battery_title">Battery</string>
+    <string name="charging">Charging</string>
+    <string name="not_charging">Not charging</string>
+    <string name="loading_battery_status">Loading battery status...</string>
+
+    <!-- Device color -->
+    <string name="device_color_title">Device Color</string>
+    <string name="color_id_format">Color ID: %1$s</string>
+    <string name="paren_format">(%1$s)</string>
+
+    <!-- Sound icons -->
+    <string name="sound_icons_title">Sound Icons</string>
+    <string name="sound_icons_label">Audio feedback when pressing buttons</string>
+    <string name="setting_sound_icons_to_enabled">Setting Sound Icons to enabled...</string>
+    <string name="setting_sound_icons_to_disabled">Setting Sound Icons to disabled...</string>
+    <string name="sound_icons_enabled">Sound Icons enabled</string>
+    <string name="sound_icons_disabled">Sound Icons disabled</string>
+    <string name="failed_to_change_sound_icons">Failed to change Sound Icons setting</string>
+
+    <!-- Battery capacity -->
+    <string name="battery_capacity_title">Battery Capacity</string>
+    <string name="current_capacity_label">Current capacity:</string>
+    <string name="maximum_capacity_label">Maximum capacity:</string>
+    <string name="capacity_mah_format">%1$d mAh</string>
+    <string name="battery_health_label">Battery health:</string>
+    <string name="battery_capacity_desc">Shows the current and maximum battery capacity</string>
+
+    <!-- Equalizer (EQ) -->
+    <string name="equalizer_title">Equalizer</string>
+    <string name="eq_band_bass">Bass</string>
+    <string name="eq_band_mid">Mid</string>
+    <string name="eq_band_treble">Treble</string>
+    <string name="gain_value_signed_format">%1$d dB</string>
+    <string name="adjust_frequency_response_format">Adjust frequency response (%1$d to +%2$d dB)</string>
+    <string name="setting_eq_band_to_format">Setting %1$s to %2$s dB…</string>
+    <string name="eq_band_set_to_format">%1$s set to %2$s dB</string>
+    <string name="failed_to_set_eq_band_format">Failed to set %1$s</string>
+
+    <!-- Eco mode -->
+    <string name="eco_mode_title">ECO Mode</string>
+    <string name="energy_saving_mode_label">Energy saving mode</string>
+    <string name="eco_mode_desc">Reduces power consumption to extend battery life</string>
+
+    <!-- Master mute -->
+    <string name="master_mute_title">Master Mute</string>
+    <string name="mute_audio_output_label">Mute audio output</string>
+    <string name="quick_silence_desc">Quickly silence all audio playback</string>
+
+    <!-- Multipoint -->
+    <string name="multipoint_title">Multipoint</string>
+    <string name="multipoint_label">Connect to multiple devices simultaneously</string>
+    <string name="multipoint_desc">When enabled, your headphones can be connected to two devices at once.</string>
+
+    <!-- PartyLink broadcast -->
+    <string name="partylink_broadcast_title">PartyLink Broadcast</string>
+    <string name="partylink_broadcast_label">Broadcast audio to multiple speakers</string>
+    <string name="partylink_broadcast_desc">When enabled, audio will be broadcast to nearby PartyLink speakers.</string>
+
+    <!-- LED brightness -->
+    <string name="led_brightness_title">LED Brightness</string>
+
+    <!-- Source selection -->
+    <string name="source_selection_title">Source Selection</string>
+    <string name="source_bluetooth">Bluetooth</string>
+    <string name="source_aux">AUX</string>
+    <string name="source_usb">USB</string>
+    <string name="setting_source_to_format">Setting source to %1$s...</string>
+    <string name="source_set_to_format">Source set to %1$s</string>
+    <string name="failed_to_set_source">Failed to set source</string>
+
+    <!-- Auto-off timer -->
+    <string name="auto_off_timer_title">Auto-Off Timer</string>
+    <string name="disabled">Disabled</string>
+    <string name="minutes_format">%1$d minutes</string>
+    <string name="off_short">Off</string>
+    <string name="minutes_short_format">%1$dm</string>
+    <string name="setting_auto_off_timer_to_format">Setting Auto-Off timer to %1$s...</string>
+    <string name="auto_off_timer_set_to_format">Auto-Off timer set to %1$s</string>
+    <string name="failed_to_set_auto_off_timer">Failed to set Auto-Off timer</string>
+
+    <!-- Master volume -->
+    <string name="master_volume_title">Master Volume</string>
+    <string name="setting_volume_to_format">Setting volume to %1$d%...</string>
+    <string name="volume_set_to_format">Volume set to %1$d%</string>
+    <string name="failed_to_set_volume">Failed to set volume</string>
+
+    <!-- Battery friendly charging -->
+    <string name="battery_friendly_charging_title">Battery Friendly Charging</string>
+    <string name="battery_friendly_mode_label">Extended battery life mode</string>
+    <string name="battery_friendly_desc1">Stops charging at 80% to extend battery lifespan</string>
+    <string name="battery_friendly_desc2">You can also enable this by double-pressing the power button when charging</string>
+    <string name="battery_friendly_enabled">Battery Friendly Charging enabled</string>
+    <string name="battery_friendly_disabled">Battery Friendly Charging disabled</string>
+    <string name="battery_friendly_failed_enable">Failed to enable Battery Friendly Charging</string>
+    <string name="battery_friendly_failed_disable">Failed to disable Battery Friendly Charging</string>
+
+    <!-- Firmware versions -->
+    <string name="firmware_versions_title">Firmware Versions</string>
+    <string name="firmware_bt_label">BT Version:</string>
+    <string name="firmware_mcu_label">MCU Version:</string>
+    <string name="firmware_dsp_label">DSP Version:</string>
+
+    <!-- Eco mode messages -->
+    <string name="eco_mode_enabled">ECO mode enabled</string>
+    <string name="eco_mode_disabled">ECO mode disabled</string>
+    <string name="eco_mode_failed_enable">Failed to enable ECO mode</string>
+    <string name="eco_mode_failed_disable">Failed to disable ECO mode</string>
+
+    <!-- Master mute messages -->
+    <string name="device_muted">Device muted</string>
+    <string name="device_unmuted">Device unmuted</string>
+    <string name="failed_to_mute_device">Failed to mute device</string>
+    <string name="failed_to_unmute_device">Failed to unmute device</string>
+
+    <!-- Multipoint messages -->
+    <string name="enabling_multipoint">Enabling multipoint...</string>
+    <string name="disabling_multipoint">Disabling multipoint...</string>
+    <string name="multipoint_enabled">Multipoint enabled</string>
+    <string name="multipoint_disabled">Multipoint disabled</string>
+    <string name="multipoint_failed_enable">Failed to enable multipoint</string>
+    <string name="multipoint_failed_disable">Failed to disable multipoint</string>
+
+    <!-- PartyLink broadcast messages -->
+    <string name="starting_partylink_broadcast">Starting PartyLink broadcast...</string>
+    <string name="stopping_partylink_broadcast">Stopping PartyLink broadcast...</string>
+    <string name="partylink_broadcast_started">PartyLink broadcast started</string>
+    <string name="partylink_broadcast_stopped">PartyLink broadcast stopped</string>
+    <string name="partylink_broadcast_failed_start">Failed to start PartyLink broadcast</string>
+    <string name="partylink_broadcast_failed_stop">Failed to stop PartyLink broadcast</string>
+</resources>

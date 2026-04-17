@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Request legacy Bluetooth permissions on older devices. -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+
+    <!-- Request Nearby Devices permission on Android 12+ -->
+    <!-- Need BLUETOOTH_CONNECT permission for connecting to paired Bluetooth devices. -->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <!-- Need BLUETOOTH_SCAN permission for discovering new Bluetooth devices. -->
+    <!-- Declare BLUETOOTH_SCAN does not need location -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+
+    <!-- Request location permissions for scanning on pre-Android 12 devices -->
+    <!-- Although BLUETOOTH_SCAN does not require location anymore, it's good practice for compatibility -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Add this line if your app needs Bluetooth scanning results even when the screen is off -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" /> -->
+
+    <application
+        android:name=".AndroidApp"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="OpenMynd"
+        android:theme="@android:style/Theme.Material.NoActionBar"
+        android:localeConfig="@xml/locales_config"
+        tools:targetApi="33">
+        <activity
+            android:name=".AppActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

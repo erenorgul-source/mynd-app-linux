@@ -1,0 +1,180 @@
+<resources>
+    <!-- Common/general -->
+    <string name="unknown">Sconosciuto</string>
+    <string name="ellipsis">...</string>
+
+    <!-- Tabs -->
+    <string name="favorites_tab_title">Preferiti</string>
+    <string name="scan_tab_title">Scansione</string>
+
+    <!-- Search devices -->
+    <string name="scan_for_devices_title">Cerca dispositivi</string>
+    <string name="refresh_scan_cd">Aggiorna scansione</string>
+    <string name="scanning">Scansione in corso...</string>
+    <string name="start_scan">Avvia scansione</string>
+    <string name="searching_devices">Ricerca dei dispositivi...</string>
+    <string name="no_teufel_devices_found">Nessun dispositivo Teufel trovato.</string>
+    <string name="device_id_format">ID: %1$s</string>
+    <string name="rssi_dbm_format">%1$d dBm</string>
+    <string name="connected_to_format">Connesso a: %1$s</string>
+    <string name="disconnect">Disconnetti</string>
+    <string name="connecting_to_format">Connessione a %1$s</string>
+    <string name="disconnected">Disconnesso</string>
+    <string name="connection_failed_format">Connessione non riuscita: %1$s</string>
+    <string name="not_connected">Non connesso</string>
+    <string name="error_format">Errore: %1$s</string>
+    <string name="error_prefix">Errore: </string>
+
+    <!-- Known devices -->
+    <string name="clear_all_cd">Cancella tutto</string>
+    <string name="clear_all_devices">Cancella tutti i dispositivi</string>
+    <string name="connect">Connetti</string>
+    <string name="known_devices_title">Dispositivi conosciuti</string>
+    <string name="known_devices_hint">Connetti i dispositivi tramite la schermata Cerca dispositivi\nper aggiungerli all'elenco dei conosciuti</string>
+    <string name="last_connected_format">Ultima connessione: %1$s</string>
+    <string name="remove_device_cd">Rimuovi dispositivo</string>
+    <string name="no_known_devices">Nessun dispositivo conosciuto</string>
+    <string name="something_went_wrong_try_again">Si è verificato un problema, riprova</string>
+    <string name="loading">Caricamento</string>
+
+    <!-- Permissions -->
+    <string name="permissions_required_title">Autorizzazioni necessarie</string>
+    <string name="permissions_required_message">Questa app necessita delle autorizzazioni per Posizione e Bluetooth per trovare e connettere i tuoi dispositivi.</string>
+    <string name="current_states_format">Stati attuali:\nBluetooth Scan: %1$s\nBluetooth Connect: %1$s</string>
+    <string name="grant_permissions_button">Concedi autorizzazioni</string>
+
+    <!-- Control screen -->
+    <string name="device_control_title">Controllo dispositivo</string>
+    <string name="back_cd">Indietro</string>
+    <string name="status_format">Stato: %1$s</string>
+    <string name="device_disconnected_or_not_found">Dispositivo disconnesso o non trovato.</string>
+
+    <!-- Battery -->
+    <string name="battery_title">Batteria</string>
+    <string name="charging">In carica</string>
+    <string name="not_charging">Non in carica</string>
+    <string name="loading_battery_status">Caricamento stato batteria...</string>
+
+    <!-- Device color -->
+    <string name="device_color_title">Colore dispositivo</string>
+    <string name="color_id_format">ID colore: %1$s</string>
+    <string name="paren_format">(%1$s)</string>
+
+    <!-- Sound icons -->
+    <string name="sound_icons_title">Icone sonore</string>
+    <string name="sound_icons_label">Feedback audio alla pressione dei pulsanti</string>
+    <string name="setting_sound_icons_to_enabled">Attivazione Icone sonore...</string>
+    <string name="setting_sound_icons_to_disabled">Disattivazione Icone sonore...</string>
+    <string name="sound_icons_enabled">Icone sonore attivate</string>
+    <string name="sound_icons_disabled">Icone sonore disattivate</string>
+    <string name="failed_to_change_sound_icons">Impossibile modificare l'impostazione Icone sonore</string>
+
+    <!-- Battery capacity -->
+    <string name="battery_capacity_title">Capacità batteria</string>
+    <string name="current_capacity_label">Capacità attuale:</string>
+    <string name="maximum_capacity_label">Capacità massima:</string>
+    <string name="capacity_mah_format">%1$d mAh</string>
+    <string name="battery_health_label">Stato batteria:</string>
+    <string name="battery_capacity_desc">Mostra la capacità attuale e massima della batteria</string>
+
+    <!-- Equalizer (EQ) -->
+    <string name="equalizer_title">Equalizzatore</string>
+    <string name="eq_band_bass">Bassi</string>
+    <string name="eq_band_mid">Medi</string>
+    <string name="eq_band_treble">Alti</string>
+    <string name="gain_value_signed_format">%1$s dB</string>
+    <string name="adjust_frequency_response_format">Regola la risposta in frequenza (%1$d a +%2$d dB)</string>
+
+    <!-- Eco mode -->
+    <string name="eco_mode_title">Modalità ECO</string>
+    <string name="energy_saving_mode_label">Modalità risparmio energetico</string>
+    <string name="eco_mode_desc">Riduce il consumo energetico per prolungare la durata della batteria</string>
+
+    <!-- Master mute -->
+    <string name="master_mute_title">Silenzio principale</string>
+    <string name="mute_audio_output_label">Silenzia uscita audio</string>
+    <string name="quick_silence_desc">Silenzia rapidamente tutta la riproduzione audio</string>
+
+    <!-- Multipoint -->
+    <string name="multipoint_title">Multipoint</string>
+    <string name="multipoint_label">Connetti a più dispositivi contemporaneamente</string>
+    <string name="multipoint_desc">Se abilitato, le cuffie possono connettersi a due dispositivi contemporaneamente.</string>
+
+    <!-- PartyLink broadcast -->
+    <string name="partylink_broadcast_title">Trasmissione PartyLink</string>
+    <string name="partylink_broadcast_label">Trasmetti audio a più altoparlanti</string>
+    <string name="partylink_broadcast_desc">Se abilitato, l'audio verrà trasmesso agli altoparlanti PartyLink vicini.</string>
+
+    <!-- LED brightness -->
+    <string name="led_brightness_title">Luminosità LED</string>
+
+    <!-- Source selection -->
+    <string name="source_selection_title">Selezione sorgente</string>
+    <string name="source_bluetooth">Bluetooth</string>
+    <string name="source_aux">AUX</string>
+    <string name="source_usb">USB</string>
+    <string name="setting_source_to_format">Impostazione sorgente su %1$s...</string>
+    <string name="source_set_to_format">Sorgente impostata su %1$s</string>
+    <string name="failed_to_set_source">Impossibile impostare la sorgente</string>
+
+    <!-- Auto-off timer -->
+    <string name="auto_off_timer_title">Spegnimento automatico</string>
+    <string name="disabled">Disattivato</string>
+    <string name="minutes_format">%1$d minuti</string>
+    <string name="off_short">Spento</string>
+    <string name="minutes_short_format">%1$dm</string>
+    <string name="setting_auto_off_timer_to_format">Impostazione spegnimento automatico su %1$s...</string>
+    <string name="auto_off_timer_set_to_format">Spegnimento automatico impostato su %1$s</string>
+    <string name="failed_to_set_auto_off_timer">Impossibile impostare lo spegnimento automatico</string>
+
+    <!-- Master volume -->
+    <string name="master_volume_title">Volume principale</string>
+    <string name="setting_volume_to_format">Impostazione volume su %1$d%...</string>
+    <string name="volume_set_to_format">Volume impostato su %1$d%</string>
+    <string name="failed_to_set_volume">Impossibile impostare il volume</string>
+
+    <!-- Battery friendly charging -->
+    <string name="battery_friendly_charging_title">Ricarica amica della batteria</string>
+    <string name="battery_friendly_mode_label">Modalità durata batteria estesa</string>
+    <string name="battery_friendly_desc1">Arresta la carica all'80% per prolungare la durata della batteria</string>
+    <string name="battery_friendly_desc2">Puoi attivarla anche premendo due volte il pulsante di accensione durante la ricarica</string>
+    <string name="battery_friendly_enabled">Ricarica amica della batteria attivata</string>
+    <string name="battery_friendly_disabled">Ricarica amica della batteria disattivata</string>
+    <string name="battery_friendly_failed_enable">Impossibile attivare la ricarica amica della batteria</string>
+    <string name="battery_friendly_failed_disable">Impossibile disattivare la ricarica amica della batteria</string>
+
+    <!-- Eco mode messages -->
+    <string name="eco_mode_enabled">Modalità ECO attivata</string>
+    <string name="eco_mode_disabled">Modalità ECO disattivata</string>
+    <string name="eco_mode_failed_enable">Impossibile attivare la modalità ECO</string>
+    <string name="eco_mode_failed_disable">Impossibile disattivare la modalità ECO</string>
+
+    <!-- Master mute messages -->
+    <string name="device_muted">Dispositivo silenziato</string>
+    <string name="device_unmuted">Dispositivo non silenziato</string>
+    <string name="failed_to_mute_device">Impossibile silenziare il dispositivo</string>
+    <string name="failed_to_unmute_device">Impossibile rimuovere il silenzio</string>
+
+    <!-- Multipoint messages -->
+    <string name="enabling_multipoint">Abilitazione multipoint...</string>
+    <string name="disabling_multipoint">Disabilitazione multipoint...</string>
+    <string name="multipoint_enabled">Multipoint abilitato</string>
+    <string name="multipoint_disabled">Multipoint disabilitato</string>
+    <string name="multipoint_failed_enable">Impossibile abilitare il multipoint</string>
+    <string name="multipoint_failed_disable">Impossibile disabilitare il multipoint</string>
+
+    <!-- PartyLink broadcast messages -->
+    <string name="starting_partylink_broadcast">Avvio trasmissione PartyLink...</string>
+    <string name="stopping_partylink_broadcast">Arresto trasmissione PartyLink...</string>
+    <string name="partylink_broadcast_started">Trasmissione PartyLink avviata</string>
+    <string name="partylink_broadcast_stopped">Trasmissione PartyLink arrestata</string>
+    <string name="partylink_broadcast_failed_start">Impossibile avviare la trasmissione PartyLink</string>
+    <string name="partylink_broadcast_failed_stop">Impossibile arrestare la trasmissione PartyLink</string>
+    
+    <!-- Firmware versions -->
+    <string name="firmware_versions_title">Versioni firmware</string>
+    <string name="firmware_bt_label">Versione BT:</string>
+    <string name="firmware_mcu_label">Versione MCU:</string>
+    <string name="firmware_dsp_label">Versione DSP:</string>
+</resources>
+
