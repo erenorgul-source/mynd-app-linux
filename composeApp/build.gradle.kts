@@ -1,3 +1,4 @@
+import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.jetbrains.compose.ExperimentalComposeLibrary
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
@@ -142,6 +143,16 @@ kotlin {
                 runtimeOnly(libs.slf4j.simple)
             }
         }
+    }
+}
+
+tasks.named<Test>("desktopTest") {
+    // dbus-java requires a D-Bus machine ID even for the tests' private bus. Containers and
+    // clean build chroots (e.g. makepkg in a devtools chroot) often have no /etc/machine-id,
+    // so point dbus-java at a fixed one.
+    environment("DBUS_MACHINE_ID_LOCATION", file("src/desktopTest/dbus-machine-id").absolutePath)
+    testLogging {
+        exceptionFormat = TestExceptionFormat.FULL
     }
 }
 

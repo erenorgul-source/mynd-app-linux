@@ -19,8 +19,8 @@ import org.bluez.Error as BlueZError
 class PrivateDBusDaemon : AutoCloseable {
     private val socketDir = Files.createTempDirectory("openmynd-dbus").toFile()
 
-    // An explicit path socket: with the default session config some distros (e.g. Arch) listen
-    // on an abstract socket, which dbus-java's JDK unix socket transport can't connect to.
+    // An explicit path socket keeps the address independent of the distro's session.conf, which
+    // may listen on an abstract socket that dbus-java's JDK unix socket transport can't use.
     private val process: Process = ProcessBuilder(
         "dbus-daemon", "--session", "--nofork", "--nopidfile", "--print-address",
         "--address=unix:path=${File(socketDir, "bus").absolutePath}",
