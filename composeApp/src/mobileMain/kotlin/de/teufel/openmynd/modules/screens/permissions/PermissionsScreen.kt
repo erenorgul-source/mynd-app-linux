@@ -34,9 +34,9 @@ import openmynd.composeapp.generated.resources.current_states_format
 import openmynd.composeapp.generated.resources.grant_permissions_button
 
 @Composable
-fun PermissionsRequired(
+actual fun PermissionsRequired(
     onPermissionsGranted: @Composable () -> Unit,
-    modifier: Modifier = Modifier,
+    modifier: Modifier,
 ) {
     val permissionManager = koinInject<PermissionManager>()
     val permissionsController = koinInject<PermissionsController>()

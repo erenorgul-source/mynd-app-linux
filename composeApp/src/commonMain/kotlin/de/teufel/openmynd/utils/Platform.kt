@@ -1,7 +1,7 @@
 package de.teufel.openmynd.utils
 
 enum class Platform {
-    ANDROID, IOS
+    ANDROID, IOS, LINUX
 }
 
-expect fun getCurrentPlatform(): Platform 
+expect fun getCurrentPlatform(): Platform
