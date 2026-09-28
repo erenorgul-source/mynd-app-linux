@@ -184,4 +184,20 @@
     <string name="partylink_broadcast_stopped">PartyLink broadcast stopped</string>
     <string name="partylink_broadcast_failed_start">Failed to start PartyLink broadcast</string>
     <string name="partylink_broadcast_failed_stop">Failed to stop PartyLink broadcast</string>
+
+    <!-- Linux desktop -->
+    <string name="bluetooth_checking">Connecting to the Bluetooth service…</string>
+    <string name="bluetooth_unavailable_title">Bluetooth service not available</string>
+    <string name="bluetooth_unavailable_message">OpenMynd uses the BlueZ Bluetooth service (bluetoothd), which doesn\'t seem to be running. Start it with:</string>
+    <string name="bluetooth_no_adapter_title">No Bluetooth adapter found</string>
+    <string name="bluetooth_no_adapter_message">Connect a Bluetooth adapter or check that it isn\'t disabled in the firmware settings.</string>
+    <string name="bluetooth_blocked_title">Bluetooth is blocked</string>
+    <string name="bluetooth_blocked_message">Bluetooth is disabled by airplane mode or a hardware switch. Unblock it in your system settings or with:</string>
+    <string name="bluetooth_off_title">Bluetooth is off</string>
+    <string name="bluetooth_off_message">Turn on Bluetooth to find and control your MYND.</string>
+    <string name="bluetooth_turn_on">Turn on Bluetooth</string>
+    <string name="bluetooth_turn_on_failed">Couldn\'t turn on Bluetooth. Try it in your system settings.</string>
+    <string name="bluetooth_off_banner">Bluetooth is not available. Your speaker is disconnected.</string>
+    <string name="retry">Retry</string>
+    <string name="select_firmware_file">Select firmware file</string>
 </resources>

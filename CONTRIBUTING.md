@@ -8,9 +8,10 @@ Thanks for your interest in contributing! This project is a Kotlin Multiplatform
 - iOS/macOS: Xcode 15+
 - Run Android: `./gradlew :composeApp:assembleDebug`
 - Run iOS: open `iosApp/iosApp.xcodeproj` and run the `iosApp` scheme
+- Run Linux desktop: `./gradlew :composeApp:run` (no Android SDK needed)
 
 ## Project structure
-- `composeApp/`: shared UI and business logic (commonMain, androidMain, iosMain)
+- `composeApp/`: shared UI and business logic (commonMain, mobileMain, androidMain, iosMain, desktopMain)
 - `iosApp/`: native iOS launcher app
 - `gradle/libs.versions.toml`: dependency versions
 
@@ -21,12 +22,14 @@ Thanks for your interest in contributing! This project is a Kotlin Multiplatform
 - Keep logging concise; avoid noisy logs in release paths.
 
 ## Bluetooth LE backends
-- Default is BlueFalcon, alternate is Kable,
+- Mobile: default is BlueFalcon, alternate is Kable.
+- Linux desktop: BlueZ over D-Bus (`BlueZDeviceConnector`).
 - Switch via `selectedBackend` in `deviceConnectorModule` or pass a `ConnectorBackend` to `initKoin` on platform startup.
 
 ## Testing
 - Android UI tests: `./gradlew :composeApp:pixel5Check`
 - iOS simulator tests: `./gradlew :composeApp:iosSimulatorArm64Test`
+- Linux desktop tests: `./gradlew :composeApp:desktopTest` (needs `dbus-daemon`; BlueZ and the XDG portal are mocked on a private bus)
 
 ## Submitting changes
 1. Fork and create a topic branch

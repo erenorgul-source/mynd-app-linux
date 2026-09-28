@@ -1,6 +1,5 @@
 package de.teufel.openmynd.modules.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.darkColorScheme
@@ -77,8 +76,10 @@ internal val LocalThemeIsDark = compositionLocalOf { mutableStateOf(true) }
 internal fun AppTheme(
     content: @Composable () -> Unit
 ) {
-    val systemIsDark = isSystemInDarkTheme()
+    val systemIsDark = systemPrefersDarkTheme()
     val isDarkState = remember { mutableStateOf(systemIsDark) }
+    // Follow the system when it switches between light and dark while the app is running.
+    LaunchedEffect(systemIsDark) { isDarkState.value = systemIsDark }
     CompositionLocalProvider(
         LocalThemeIsDark provides isDarkState
     ) {
@@ -93,3 +94,7 @@ internal fun AppTheme(
 
 @Composable
 internal expect fun SystemAppearance(isDark: Boolean)
+
+/** Whether the OS/desktop currently prefers a dark color scheme. */
+@Composable
+internal expect fun systemPrefersDarkTheme(): Boolean

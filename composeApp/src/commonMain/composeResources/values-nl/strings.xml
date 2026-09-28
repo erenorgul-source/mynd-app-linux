@@ -176,5 +176,20 @@
     <string name="firmware_bt_label">BT-versie:</string>
     <string name="firmware_mcu_label">MCU-versie:</string>
     <string name="firmware_dsp_label">DSP-versie:</string>
-</resources>
 
+    <!-- Linux desktop -->
+    <string name="bluetooth_checking">Verbinden met de Bluetooth-service…</string>
+    <string name="bluetooth_unavailable_title">Bluetooth-service niet beschikbaar</string>
+    <string name="bluetooth_unavailable_message">OpenMynd gebruikt de BlueZ-Bluetooth-service (bluetoothd), die niet lijkt te draaien. Start deze met:</string>
+    <string name="bluetooth_no_adapter_title">Geen Bluetooth-adapter gevonden</string>
+    <string name="bluetooth_no_adapter_message">Sluit een Bluetooth-adapter aan of controleer of deze niet is uitgeschakeld in de firmware-instellingen.</string>
+    <string name="bluetooth_blocked_title">Bluetooth is geblokkeerd</string>
+    <string name="bluetooth_blocked_message">Bluetooth is uitgeschakeld door de vliegtuigmodus of een hardwareschakelaar. Hef de blokkering op in de systeeminstellingen of met:</string>
+    <string name="bluetooth_off_title">Bluetooth staat uit</string>
+    <string name="bluetooth_off_message">Zet Bluetooth aan om je MYND te vinden en te bedienen.</string>
+    <string name="bluetooth_turn_on">Bluetooth inschakelen</string>
+    <string name="bluetooth_turn_on_failed">Bluetooth kon niet worden ingeschakeld. Probeer het via de systeeminstellingen.</string>
+    <string name="bluetooth_off_banner">Bluetooth is niet beschikbaar. Je luidspreker is losgekoppeld.</string>
+    <string name="retry">Opnieuw proberen</string>
+    <string name="select_firmware_file">Firmwarebestand selecteren</string>
+</resources>

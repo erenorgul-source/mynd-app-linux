@@ -1,0 +1,19 @@
+[Desktop Entry]
+Type=Application
+Name=OpenMynd
+GenericName=Speaker Remote
+GenericName[de]=Lautsprecher-Fernbedienung
+Comment=Control your Teufel MYND speaker over Bluetooth
+Comment[de]=Steuere deinen Teufel MYND-Lautsprecher über Bluetooth
+Comment[es]=Controla tu altavoz Teufel MYND por Bluetooth
+Comment[fr]=Contrôlez votre enceinte Teufel MYND via Bluetooth
+Comment[it]=Controlla il tuo altoparlante Teufel MYND via Bluetooth
+Comment[nl]=Bedien je Teufel MYND-luidspreker via Bluetooth
+Comment[pl]=Steruj głośnikiem Teufel MYND przez Bluetooth
+Exec=openmynd
+Icon=de.teufel.openmynd
+Terminal=false
+Categories=AudioVideo;Audio;
+Keywords=bluetooth;speaker;teufel;mynd;equalizer;battery;
+StartupNotify=true
+StartupWMClass=openmynd

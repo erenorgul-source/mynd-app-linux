@@ -176,4 +176,20 @@
     <string name="firmware_bt_label">BT‑Version:</string>
     <string name="firmware_mcu_label">MCU‑Version:</string>
     <string name="firmware_dsp_label">DSP‑Version:</string>
+
+    <!-- Linux desktop -->
+    <string name="bluetooth_checking">Verbindung zum Bluetooth-Dienst wird hergestellt…</string>
+    <string name="bluetooth_unavailable_title">Bluetooth-Dienst nicht verfügbar</string>
+    <string name="bluetooth_unavailable_message">OpenMynd nutzt den BlueZ-Bluetooth-Dienst (bluetoothd), der anscheinend nicht läuft. Starte ihn mit:</string>
+    <string name="bluetooth_no_adapter_title">Kein Bluetooth-Adapter gefunden</string>
+    <string name="bluetooth_no_adapter_message">Schließe einen Bluetooth-Adapter an oder prüfe, ob er in den Firmware-Einstellungen deaktiviert ist.</string>
+    <string name="bluetooth_blocked_title">Bluetooth ist blockiert</string>
+    <string name="bluetooth_blocked_message">Bluetooth ist durch den Flugmodus oder einen Hardware-Schalter deaktiviert. Hebe die Blockierung in den Systemeinstellungen auf oder mit:</string>
+    <string name="bluetooth_off_title">Bluetooth ist ausgeschaltet</string>
+    <string name="bluetooth_off_message">Schalte Bluetooth ein, um deinen MYND zu finden und zu steuern.</string>
+    <string name="bluetooth_turn_on">Bluetooth einschalten</string>
+    <string name="bluetooth_turn_on_failed">Bluetooth konnte nicht eingeschaltet werden. Versuche es in den Systemeinstellungen.</string>
+    <string name="bluetooth_off_banner">Bluetooth ist nicht verfügbar. Dein Lautsprecher ist getrennt.</string>
+    <string name="retry">Erneut versuchen</string>
+    <string name="select_firmware_file">Firmware-Datei auswählen</string>
 </resources>

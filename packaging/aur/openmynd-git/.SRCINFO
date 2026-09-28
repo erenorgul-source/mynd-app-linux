@@ -1,0 +1,24 @@
+pkgbase = openmynd-git
+	pkgdesc = Bluetooth LE controller for the Teufel MYND speaker (Linux desktop client)
+	pkgver = 1.0.0.r0.g0000000
+	pkgrel = 1
+	url = https://github.com/erenorgul-source/mynd-app-linux
+	arch = x86_64
+	arch = aarch64
+	license = MIT
+	checkdepends = dbus
+	makedepends = git
+	makedepends = jdk21-openjdk
+	depends = java-runtime>=17
+	depends = bluez
+	depends = hicolor-icon-theme
+	optdepends = xdg-desktop-portal-kde: native KDE file dialog and dark mode detection on Plasma
+	optdepends = xdg-desktop-portal-gtk: native file dialog and dark mode detection on GNOME and others
+	optdepends = bluedevil: KDE Bluetooth pairing agent
+	optdepends = xorg-xrdb: detect fractional scaling for XWayland apps on Plasma
+	provides = openmynd
+	conflicts = openmynd
+	source = openmynd::git+https://github.com/erenorgul-source/mynd-app-linux.git
+	sha256sums = SKIP
+
+pkgname = openmynd-git

@@ -176,5 +176,20 @@
     <string name="firmware_bt_label">Versión BT:</string>
     <string name="firmware_mcu_label">Versión MCU:</string>
     <string name="firmware_dsp_label">Versión DSP:</string>
-</resources>
 
+    <!-- Linux desktop -->
+    <string name="bluetooth_checking">Conectando con el servicio Bluetooth…</string>
+    <string name="bluetooth_unavailable_title">Servicio Bluetooth no disponible</string>
+    <string name="bluetooth_unavailable_message">OpenMynd usa el servicio Bluetooth BlueZ (bluetoothd), que parece no estar en ejecución. Inícialo con:</string>
+    <string name="bluetooth_no_adapter_title">No se encontró ningún adaptador Bluetooth</string>
+    <string name="bluetooth_no_adapter_message">Conecta un adaptador Bluetooth o comprueba que no esté desactivado en la configuración del firmware.</string>
+    <string name="bluetooth_blocked_title">Bluetooth está bloqueado</string>
+    <string name="bluetooth_blocked_message">Bluetooth está desactivado por el modo avión o un interruptor de hardware. Desbloquéalo en la configuración del sistema o con:</string>
+    <string name="bluetooth_off_title">Bluetooth está desactivado</string>
+    <string name="bluetooth_off_message">Activa Bluetooth para encontrar y controlar tu MYND.</string>
+    <string name="bluetooth_turn_on">Activar Bluetooth</string>
+    <string name="bluetooth_turn_on_failed">No se pudo activar Bluetooth. Inténtalo en la configuración del sistema.</string>
+    <string name="bluetooth_off_banner">Bluetooth no está disponible. Tu altavoz está desconectado.</string>
+    <string name="retry">Reintentar</string>
+    <string name="select_firmware_file">Seleccionar archivo de firmware</string>
+</resources>

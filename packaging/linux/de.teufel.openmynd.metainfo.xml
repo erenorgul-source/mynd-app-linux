@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>de.teufel.openmynd</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>OpenMynd</name>
+  <summary>Control your Teufel MYND speaker over Bluetooth</summary>
+  <description>
+    <p>
+      OpenMynd is an open source controller for the MYND open hardware speaker. It finds your
+      speaker over Bluetooth Low Energy and lets you control it from the desktop.
+    </p>
+    <ul>
+      <li>Volume, mute, EQ and source selection</li>
+      <li>Battery level, charging status and battery-friendly charging</li>
+      <li>Auto-off timer, ECO mode, LED brightness and sound icons</li>
+      <li>Multipoint and PartyLink broadcast</li>
+      <li>Firmware versions and firmware updates</li>
+    </ul>
+    <p>Requires a Bluetooth adapter and the BlueZ Bluetooth service.</p>
+  </description>
+  <launchable type="desktop-id">de.teufel.openmynd.desktop</launchable>
+  <url type="homepage">https://github.com/erenorgul-source/mynd-app-linux</url>
+  <url type="bugtracker">https://github.com/erenorgul-source/mynd-app-linux/issues</url>
+  <developer id="io.github.erenorgul-source">
+    <name>OpenMynd contributors</name>
+  </developer>
+  <categories>
+    <category>AudioVideo</category>
+    <category>Audio</category>
+  </categories>
+  <requires>
+    <control>pointing</control>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="1.0.0" date="2026-09-28">
+      <description>
+        <p>First Linux desktop release, using BlueZ for Bluetooth.</p>
+      </description>
+    </release>
+  </releases>
+</component>

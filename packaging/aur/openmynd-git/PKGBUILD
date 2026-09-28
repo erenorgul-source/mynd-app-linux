@@ -1,0 +1,60 @@
+# Maintainer: erenorgul-source (set name and email before publishing to the AUR)
+
+pkgname=openmynd-git
+_pkgname=openmynd
+_appid=de.teufel.openmynd
+pkgver=1.0.0.r0.g0000000
+pkgrel=1
+pkgdesc="Bluetooth LE controller for the Teufel MYND speaker (Linux desktop client)"
+arch=('x86_64' 'aarch64')
+url="https://github.com/erenorgul-source/mynd-app-linux"
+license=('MIT')
+depends=('java-runtime>=17' 'bluez' 'hicolor-icon-theme')
+makedepends=('git' 'jdk21-openjdk')
+checkdepends=('dbus')
+optdepends=(
+    'xdg-desktop-portal-kde: native KDE file dialog and dark mode detection on Plasma'
+    'xdg-desktop-portal-gtk: native file dialog and dark mode detection on GNOME and others'
+    'bluedevil: KDE Bluetooth pairing agent'
+    'xorg-xrdb: detect fractional scaling for XWayland apps on Plasma'
+)
+provides=("$_pkgname")
+conflicts=("$_pkgname")
+source=("$_pkgname::git+$url.git")
+sha256sums=('SKIP')
+
+pkgver() {
+    cd "$_pkgname"
+    printf "1.0.0.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short=7 HEAD)"
+}
+
+_gradle() {
+    # Gradle 8.13 runs on JDK <= 23; build with JDK 21 regardless of the system default.
+    export JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+    export GRADLE_USER_HOME="$srcdir/.gradle"
+    ./gradlew --no-daemon --console=plain -Popenmynd.android=false "$@"
+}
+
+build() {
+    cd "$_pkgname"
+    _gradle :composeApp:packageUberJarForCurrentOS
+}
+
+check() {
+    cd "$_pkgname"
+    # The BlueZ tests run against a mock on a private dbus-daemon, never the system bus.
+    _gradle :composeApp:desktopTest
+}
+
+package() {
+    cd "$_pkgname"
+    install -Dm644 composeApp/build/compose/jars/openmynd-linux-*.jar "$pkgdir/usr/share/java/$_pkgname/$_pkgname.jar"
+    install -Dm755 packaging/linux/openmynd.sh "$pkgdir/usr/bin/$_pkgname"
+    install -Dm644 "packaging/linux/$_appid.desktop" -t "$pkgdir/usr/share/applications"
+    install -Dm644 "packaging/linux/$_appid.metainfo.xml" -t "$pkgdir/usr/share/metainfo"
+    for icon in packaging/linux/icons/*/openmynd.png; do
+        size="$(basename "$(dirname "$icon")")"
+        install -Dm644 "$icon" "$pkgdir/usr/share/icons/hicolor/$size/apps/$_appid.png"
+    done
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

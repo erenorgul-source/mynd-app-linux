@@ -7,6 +7,7 @@ import de.teufel.openmynd.modules.core.device.findDeviceTypeByName
 import de.teufel.openmynd.modules.core.protocol.actions.ActionsProtocol.Companion.ACTIONS_COMMAND_CHARACTERISTIC_UUID
 import de.teufel.openmynd.modules.core.protocol.actions.ActionsProtocol.Companion.ACTIONS_RESPONSE_CHARACTERISTIC_UUID
 import de.teufel.openmynd.modules.core.protocol.actions.ActionsProtocol.Companion.ACTIONS_SERVICE_UUID
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -319,6 +320,8 @@ class BlueZDeviceConnector(
         val path = requireCharacteristicPath(serviceUuid, characteristicUuid)
         val value = try {
             withContext(Dispatchers.IO) { bluez.characteristic(path).readValue(emptyMap()) }
+        } catch (e: CancellationException) {
+            throw e
         } catch (e: Exception) {
             logger.w { "Read $characteristicUuid failed: ${e.message}" }
             ByteArray(0)
