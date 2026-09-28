@@ -46,10 +46,10 @@ class BlueZDeviceConnectorTest {
 
     @AfterTest
     fun tearDown() {
-        if (!::daemon.isInitialized) return
-        client.close()
-        mock.close()
-        daemon.close()
+        // Close whatever setUp managed to create, even if it failed halfway.
+        if (::client.isInitialized) client.close()
+        if (::mock.isInitialized) mock.close()
+        if (::daemon.isInitialized) daemon.close()
     }
 
     private fun test(block: suspend CoroutineScope.() -> Unit) = runBlocking { withTimeout(15_000) { block() } }

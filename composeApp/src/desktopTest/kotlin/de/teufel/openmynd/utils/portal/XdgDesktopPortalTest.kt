@@ -54,10 +54,10 @@ class XdgDesktopPortalTest {
 
     @AfterTest
     fun tearDown() {
-        if (!::daemon.isInitialized) return
-        portal.close()
-        portalConnection.close()
-        daemon.close()
+        // Close whatever setUp managed to create, even if it failed halfway.
+        if (::portal.isInitialized) portal.close()
+        if (::portalConnection.isInitialized) portalConnection.close()
+        if (::daemon.isInitialized) daemon.close()
     }
 
     private inner class MockPortal : PortalSettings, PortalFileChooser {

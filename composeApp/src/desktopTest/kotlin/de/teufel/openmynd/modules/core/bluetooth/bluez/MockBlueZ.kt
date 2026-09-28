@@ -10,13 +10,21 @@ import org.freedesktop.dbus.interfaces.Properties
 import org.freedesktop.dbus.types.UInt16
 import org.freedesktop.dbus.types.Variant
 import java.io.File
+import java.nio.file.Files
 import java.util.concurrent.CopyOnWriteArrayList
 import java.util.concurrent.TimeUnit
 import org.bluez.Error as BlueZError
 
 /** A throwaway `dbus-daemon` so tests never touch the real system bus. */
 class PrivateDBusDaemon : AutoCloseable {
-    private val process: Process = ProcessBuilder("dbus-daemon", "--session", "--nofork", "--nopidfile", "--print-address")
+    private val socketDir = Files.createTempDirectory("openmynd-dbus").toFile()
+
+    // An explicit path socket: with the default session config some distros (e.g. Arch) listen
+    // on an abstract socket, which dbus-java's JDK unix socket transport can't connect to.
+    private val process: Process = ProcessBuilder(
+        "dbus-daemon", "--session", "--nofork", "--nopidfile", "--print-address",
+        "--address=unix:path=${File(socketDir, "bus").absolutePath}",
+    )
         .redirectError(ProcessBuilder.Redirect.DISCARD)
         .start()
 
@@ -28,6 +36,7 @@ class PrivateDBusDaemon : AutoCloseable {
     override fun close() {
         process.destroy()
         process.waitFor(5, TimeUnit.SECONDS)
+        socketDir.deleteRecursively()
     }
 
     companion object {
