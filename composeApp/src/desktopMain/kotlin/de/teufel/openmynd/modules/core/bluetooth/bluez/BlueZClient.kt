@@ -168,8 +168,10 @@ class BlueZClient(
         } catch (e: Exception) {
             logger.w { "BlueZ not available: ${e.message}" }
             synchronized(lock) { objects.clear() }
-            onTreeChanged()
+            // Publish Unavailable directly: going through onTreeChanged() would briefly report
+            // NoAdapter for the now empty tree.
             _state.value = BlueZState.Unavailable(e.message ?: "org.bluez is not running")
+            _revision.value++
             return
         }
         synchronized(lock) {
